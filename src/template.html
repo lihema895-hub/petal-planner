@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f5">
+  <title>Petal Planner 🌷</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Petal Planner home">
+        <span class="brand-icon">🌷</span>
+        <span>petal planner<small>a little progress every day ♡</small></span>
+      </a>
+
+      <p class="section-label">YOUR SPACE</p>
+      <nav class="project-list" id="projectList" aria-label="Projects">
+        <button class="project-button active" data-project="default">
+          <span>♡</span> My Tasks
+        </button>
+      </nav>
+
+      <button class="add-project-button" id="addProjectBtn">
+        + New project
+      </button>
+
+      <div class="sidebar-note">
+        <span>🌸</span>
+        <p>You're growing at your own pace. Keep going, lovely!</p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <span class="date-label" id="todayLabel">A fresh new day ♡</span>
+        <span class="avatar">H</span>
+      </header>
+
+      <section class="welcome">
+        <p class="eyebrow">YOUR LITTLE CORNER OF CALM ✨</p>
+        <h1>Make today <span>lovely.</span></h1>
+        <p>One little task at a time. You've got this, darling!</p>
+      </section>
+
+      <section class="progress-card" aria-label="Daily progress">
+        <div>
+          <p class="card-label">TODAY'S LITTLE WINS 🌷</p>
+          <h2 id="progressText">0 of 0 tasks completed</h2>
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+        <span class="progress-flower">🌼</span>
+      </section>
+
+      <section class="tasks-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">YOUR TO-DO LIST</p>
+            <h2 id="taskHeading">My Tasks <span>♡</span></h2>
+          </div>
+          <button class="primary-button" id="addTaskBtn">＋ Add a task</button>
+        </div>
+
+        <div class="filter-row" aria-label="Filter tasks">
+          <button class="filter-button active" data-filter="all">All tasks</button>
+          <button class="filter-button" data-filter="active">To do</button>
+          <button class="filter-button" data-filter="completed">Completed</button>
+        </div>
+
+        <form class="task-form" id="taskForm" hidden>
+          <h3 id="formHeading">A new little task ♡</h3>
+          <label for="taskTitle">Task title</label>
+          <input id="taskTitle" name="title" placeholder="What would you like to do?" required maxlength="120">
+
+          <label for="taskDescription">A few details</label>
+          <textarea id="taskDescription" name="description" placeholder="Add a little note..." rows="3"></textarea>
+
+          <div class="form-grid">
+            <div>
+              <label for="taskDueDate">Due date</label>
+              <input id="taskDueDate" name="dueDate" type="date">
+            </div>
+            <div>
+              <label for="taskPriority">Priority</label>
+              <select id="taskPriority" name="priority">
+                <option value="low">Low 🌱</option>
+                <option value="medium" selected>Medium 🌷</option>
+                <option value="high">High 💗</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="secondary-button" id="cancelTaskBtn">Cancel</button>
+            <button type="submit" class="primary-button">Save task ♡</button>
+          </div>
+        </form>
+
+        <div class="task-list" id="taskList" aria-live="polite"></div>
+      </section>
+
+      <footer>made with love, for your future self ♡</footer>
+    </main>
+  </div>
+</body>
+</html>
